@@ -20,7 +20,8 @@ const app = Vue.createApp({
         return {
             message: 'Hola a todos',
             manager: 'Mr robot',
-            citas: quotes
+            citas: quotes,
+            newQuote: 'Hola stalker'
         }
     },
     methods:{ //se declaran los metodos que tendra el objeto
@@ -31,6 +32,12 @@ const app = Vue.createApp({
         },
         changeManager(){
             this.manager="Steve chambitas";
+        },
+        addQuote(event){
+            //console.log(event);
+            if(event.key==='Enter'){
+                console.log('enter');
+            }
         }
     }
 });
