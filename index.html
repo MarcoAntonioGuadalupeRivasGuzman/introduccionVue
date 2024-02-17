@@ -9,6 +9,11 @@
     <div id="myapp">
         <h1>Principios vue</h1>
         <p>{{message}}</p>
+        <p>{{manager}}</p>
+
+        <button v-on:click="changeMessage" >
+            Change
+        </button>
     </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="app.js"></script>
