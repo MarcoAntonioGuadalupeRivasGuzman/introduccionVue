@@ -14,6 +14,13 @@
         <button v-on:click="changeMessage" >
             Change
         </button>
+
+        <h1>Batman Quotes</h1>
+
+        <ul>
+            <li v-for="cita in citas">{{cita.quote}}</li>
+        </ul>
+        
     </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="app.js"></script>
