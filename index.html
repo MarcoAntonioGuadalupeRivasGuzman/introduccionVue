@@ -15,10 +15,18 @@
             Change
         </button>
 
-        <h1>Batman Quotes</h1>
+        <h1>Batman Quotes <small>{{newQuote}}</small> </h1>
 
-        <ul>
-            <li v-for="cita in citas">{{cita.quote}}</li>
+        <!--uso de la directiva v-model para obtener el valor de un input-->
+        <input type="text" v-model="newQuote" v-on:keypress="addQuote">
+
+        <hr>
+
+        <ul> <!--uso de la directiva v-for-->
+            <li v-for="({quote,author},index) in citas"> <!--se desestructura el objeto del iterador-->
+                <span>{{index+1}} {{quote}}</span>
+                <blockquote>-{{author}}</blockquote>
+            </li>
         </ul>
         
     </div>
