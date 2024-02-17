@@ -36,7 +36,11 @@ const app = Vue.createApp({
         addQuote(event){
             //console.log(event);
             if(event.key==='Enter'){
-                console.log('enter');
+                //console.log('enter');
+                this.citas.unshift({
+                    quote: this.newQuote,
+                    author: 'steve'
+                })
             }
         }
     }
