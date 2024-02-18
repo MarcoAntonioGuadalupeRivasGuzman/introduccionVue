@@ -18,7 +18,7 @@
         <h1>Batman Quotes <small>{{newQuote}}</small> </h1>
 
         <!--uso de la directiva v-model para obtener el valor de un input-->
-        <input type="text" v-model="newQuote" v-on:keypress="addQuote">
+        <input type="text" v-model="newQuote" v-on:keypress.enter="addQuote"> <!--uso el modificador .enter-->
 
         <hr>
 
