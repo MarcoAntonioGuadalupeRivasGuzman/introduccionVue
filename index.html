@@ -25,7 +25,7 @@
         <ul> <!--uso de la directiva v-for-->
             <li v-for="({quote,author},index) in citas"> <!--se desestructura el objeto del iterador-->
                 <span>{{index+1}} {{quote}}</span>
-                <blockquote>-{{author}}</blockquote>
+                <blockquote v-if="author!='steve'">-{{author}}</blockquote> <!--uso de condicional para mostrar este bloque-->
             </li>
         </ul>
         
