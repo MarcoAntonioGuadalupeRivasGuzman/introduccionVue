@@ -34,14 +34,10 @@ const app = Vue.createApp({
             this.manager="Steve chambitas";
         },
         addQuote(event){
-            //console.log(event);
-            if(event.key==='Enter'){
-                //console.log('enter');
-                this.citas.unshift({
-                    quote: this.newQuote,
-                    author: 'steve'
-                })
-            }
+            this.citas.unshift({
+                quote: this.newQuote,
+                author: 'steve'
+            })
         }
     }
 });
